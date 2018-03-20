@@ -1,4 +1,4 @@
-$navbar-default-bg: black;
+$navbar-default-bg: #337ab7;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -22,7 +22,7 @@ $navbar-default-bg: black;
 }
 
 .jumbotron {
-  background-image: asset-url('cards.png');
+  // background-image: asset-url('cards.png');
   background-size: cover;
   height: 470px;
 }
@@ -40,30 +40,7 @@ $navbar-default-bg: black;
   background-color: black;
 }
 
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-}
 
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
 
 .article-actions {
   border-top: 1px solid #eaeaea;
@@ -104,4 +81,8 @@ footer ul li {
 
 .input_checkbox input {
   width: auto !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: black;
 }
