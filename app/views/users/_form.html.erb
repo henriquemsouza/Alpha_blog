@@ -27,6 +27,20 @@
           <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
         </div>
       </div>
+   
+      <div class="form-group">
+        <div class="row">
+        <h4 align="center">Adress</h4>
+          <div class="col-sm-8 col-sm-offset-2">
+            <%= f.collection_check_boxes :adress_ids, Adress.all, :id, :street_name do |cb| %>
+              <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text } %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      </tr>
+   
+
       <div class="form-group">
         <div class="col-sm-8 col-sm-offset-2">
           <%= f.submit(@user.new_record? ? "Sign up" : "Update your account", class: "btn btn-primary btn-lg") %>
@@ -34,7 +48,7 @@
       </div>
     <% end %>
     <div class="col-xs-4 col-xs-offset-4">
-      [  ]      
+        
     </div>
   </div>
 </div>

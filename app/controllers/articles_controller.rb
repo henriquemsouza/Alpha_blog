@@ -4,7 +4,9 @@ class ArticlesController < ApplicationController
   before_action :require_same_user, only: [:edit, :update, :destroy]
   
   def index
-    @articles = Article.paginate(page: params[:page], per_page: 2)
+    service = Articles::ListHandler.new params
+    @article = service.perform
+    @articles = @article.paginate(page: params[:page], per_page: 2)
   end
   
   def new

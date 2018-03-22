@@ -23,6 +23,9 @@ class UsersController < ApplicationController
   end
   
   def edit
+    @adress = Adress.all
+    # byebug
+
   end
   
   def update
